@@ -1,0 +1,17 @@
+.content {
+    font-size: 16px;
+    background-color: #0e2642;
+    padding: 24px;
+    line-height: 36px;
+    margin: 24px;
+    color: #fff;
+}
+h1, h3 {
+    color: #fff;
+}
+tr {
+    background-color: #352d56;
+}
+tr:hover {
+    background-color: #2e3363;
+}

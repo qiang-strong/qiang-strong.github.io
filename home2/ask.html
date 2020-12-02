@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+    <title>Application page for Teaching Assistant</title>
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="asset/css/main.css">
+    <link rel="stylesheet" href="asset/css/ask.css">
+</head>
+<body>
+<div id="body-wrap">
+    <div class="top">
+        <img class="logo" src="asset/images/logo.png">
+        <ul>
+            <li><a href="home.html">The home page</a></li>
+            <li><a href="doc.html">Computer Science Program Description page</a></li>
+            <li><a href="ask.html" class="active">Application page for Teaching Assistant</a></li>
+        </ul>
+    </div>
+    <main class="content page-content2">
+        <h2 class="is-center">Form</h2>
+        <hr>
+        <div class="form">
+            <form class="page">
+                <div class="item-wrap">
+                    <div class="item">
+                        <div class="item-input-wrap">
+                            <span class="item-label">Students full name</span>
+                            <input class="item-input" name="username" id="username"
+                                   onblur="check('username')" onfocus="checkFocus('username')"/>
+                        </div>
+                        <div class="tips" id="username-bot-tips"></div>
+                    </div>
+                </div>
+                <div class="item-wrap">
+                    <div class="item">
+                        <div class="item-input-wrap">
+                            <span class="item-label">ID</span>
+                            <input class="item-input" name="ID" id="ID"
+                                   onblur="check('ID')" onfocus="checkFocus('ID')"/>
+                        </div>
+                        <div class="tips" id="ID-bot-tips"></div>
+                    </div>
+                </div>
+                <div class="item-wrap">
+                    <div class="item">
+                        <div class="item-input-wrap">
+                            <span class="item-label">gender</span>
+                            <input class="item-input" name="sex" id="sex"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrap">
+                    <div class="item">
+                        <div class="item-input-wrap">
+                            <span class="item-label">GPA</span>
+                            <input class="item-input" name="GPA" id="GPA"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrap">
+                    <div class="item">
+                        <div class="item-input-wrap">
+                            <span class="item-label">Submission date</span>
+                            <input class="item-input" name="Date" id="Date"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-wrap">
+                    <div class="item">
+                        <div class="item-input-wrap">
+                            <span class="item-label">Won prizes</span>
+                            <textarea class="item-area" name="APP" id="APP"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <a class="item-btn" onclick="reg()">submit</a>
+                <div class="result">
+                    <div id="res" class="res" style="display: none">
+                        <div>Submitted successfully:</div>
+                        <div id="res-info"></div>
+                    </div>
+                </div>
+            </form>
+            <div>
+                <h2 class="is-center">To calculateGPA</h2>
+                <hr>
+                <form class="page" id="form-gpa" style="padding-bottom: 0">
+                    <div class="item-gpa">
+                        <div class="item-wrap">
+                            <div class="item">
+                                <div class="item-input-wrap">
+                                    <span class="item-label">Course 1 Grade</span>
+                                    <input class="item-input" name="ID" id="sc1"/>
+                                </div>
+                                <div class="tips" id="sc1-bot-tips"></div>
+                            </div>
+                        </div>
+                        <div class="item-wrap">
+                            <div class="item">
+                                <div class="item-input-wrap">
+                                    <span class="item-label">Course 1 Total class hours</span>
+                                    <input class="item-input" name="ID" id="to1"/>
+                                </div>
+                                <div class="tips" id="to1-bot-tips"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-gpa">
+                        <div class="item-wrap">
+                            <div class="item">
+                                <div class="item-input-wrap">
+                                    <span class="item-label">Course 2 Grade</span>
+                                    <input class="item-input" name="ID" id="sc2"/>
+                                </div>
+                                <div class="tips" id="sc2-bot-tips"></div>
+                            </div>
+                        </div>
+                        <div class="item-wrap">
+                            <div class="item">
+                                <div class="item-input-wrap">
+                                    <span class="item-label">Course 2 Total class hour</span>
+                                    <input class="item-input" name="ID" id="to2"/>
+                                </div>
+                                <div class="tips" id="to2-bot-tips"></div>
+                            </div>
+                        </div>
+                        <div class="item-wrap">
+                            <div class="item">
+                                <div class="item-input-wrap">
+                                    <span class="item-label">Course 3 Grade</span>
+                                    <input class="item-input" name="ID" id="sc2"/>
+                                </div>
+                                <div class="tips" id="sc2-bot-tips"></div>
+                            </div>
+                        </div>
+                        <div class="item-wrap">
+                            <div class="item">
+                                <div class="item-input-wrap">
+                                    <span class="item-label">Course 3 Total class hour</span>
+                                    <input class="item-input" name="ID" id="to2"/>
+                                </div>
+                                <div class="tips" id="to2-bot-tips"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="is-center" style="padding-bottom: 24px">
+                    <a class="item-btn" onclick="deal()">To calculate</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div id="footer-wrap">
+            <div class="copyright">&copy;2020 kaiqiang wu<br>Tel:  010-7874878<br>blog:  www.baidu.com</div>
+        </div>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    // 聚焦
+    function checkFocus(type) {
+        var nameTips = document.getElementById("username-bot-tips");
+        var pwdTips = document.getElementById("ID-bot-tips");
+        if (type == "username") {
+            nameTips.innerHTML  = "Support Chinese numbers"
+        } else {
+            pwdTips.innerHTML  = "Two character combinations are recommended"
+        }
+    }
+    // 失去焦点
+    function check(type){
+        var name = document.getElementById("username");
+        var pwd = document.getElementById("ID");
+        var nameTips = document.getElementById("username-bot-tips");
+        var pwdTips = document.getElementById("ID-bot-tips");
+        if (type == "username") {
+            if (!name.value) {nameTips.innerHTML  = "Student's full name must not be empty"}
+            else {nameTips.innerHTML  = ""}
+        } else {
+            if (!pwd.value) {pwdTips.innerHTML  = "ID cannot be null"}
+            else {pwdTips.innerHTML  = ""}
+        }
+    }
+    // 提交
+    function reg() {
+        var name = document.getElementById("username");
+        var pwd = document.getElementById("ID");
+        var sex = document.getElementById("sex");
+        var GPA = document.getElementById("GPA");
+        var Date = document.getElementById("Date");
+        var APP = document.getElementById("APP");
+        var nameTips = document.getElementById("username-bot-tips");
+        var pwdTips = document.getElementById("ID-bot-tips");
+        var resWrap = document.getElementById("res");
+        var resInfo = document.getElementById("res-info");
+        if (!name.value || !pwd.value) {
+            if (!name.value) {nameTips.innerHTML  = "Student's full name must not be empty";}
+            if (!pwd.value) {pwdTips.innerHTML  = "ID cannot be null";}
+            return false
+        }
+        var html = '<div>'+ name.value +'</div>';
+        html += '<div>'+ pwd.value +'</div>';
+        html += '<div>'+ sex.value +'</div>';
+        html += '<div>'+ GPA.value +'</div>';
+        html += '<div>'+ Date.value +'</div>';
+        html += '<div>'+ APP.value +'</div>';
+        resInfo.innerHTML = html;
+        resWrap.style.display = ""
+    }
+
+    // 获取对应数字
+    function getNum(level) {
+        switch (level) {
+            case "A":
+                return 4;
+                break;
+            case "B":
+                return 3;
+                break;
+            case "C":
+                return 2;
+                break;
+            case "D":
+                return 1;
+                break;
+            case "F":
+                return 0;
+                break;
+            default:
+                return 0;
+                break;
+        }
+    }
+
+    // 计算
+    function deal() {
+        var top = 0;
+        var bot = 0;
+        var cnum = document.getElementsByClassName("item-gpa").length;
+        for (var i = 1; i <= cnum; i++) {
+            var sc = document.getElementById("sc" + i).value;
+            if (!sc) {
+                document.getElementById("sc"+ i +"-bot-tips").innerHTML  = "course"+ i +"The result cannot be empty";
+            }
+            var to = document.getElementById("to" + i).value;
+            if (!to) {
+                document.getElementById("to"+ i +"-bot-tips").innerHTML  = "course"+ i +"Total class hours cannot be empty";
+            }
+            if (!sc || !to) {
+                return false
+            }
+            top += Number(getNum(sc))*Number(to);
+            bot += Number(to)
+        }
+        var GPA = top/bot;
+        if(isNaN(GPA) || GPA<0){
+            alert("Sorry, there was a mistake！\nPlease check that a total credit hour entered is zero or negative\nPlease correct and click the calculation button again");
+        }
+        else if(GPA>4){
+            alert("Sorry, there was a mistake！\nPlease check that the total credit hours entered are correct\nPlease correct and click the calculation button again");
+        }
+        else {
+            alert("Your GPA" + GPA.toFixed(1) + "!");
+        }
+    }
+</script>
+</body>
+</html>

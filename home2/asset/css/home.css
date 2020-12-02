@@ -1,0 +1,56 @@
+﻿
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+.layout_page {
+    display: flex;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+#aside_content {
+    width: 100%;
+}
+#aside_content .card-widget {
+    overflow: hidden;
+    margin-top: 20px;
+    background: #fff;
+}
+#aside_content .card-content {
+    padding: 10px 12px;
+}
+.card-content .desc {
+    font-size: 14px;
+    text-indent: 37px;
+}
+.card-content .span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #8480db;
+}
+
+#aside_content .card-webinfo .webinfo {
+    padding: 20px 10px;
+}
+#aside_content .card-webinfo .webinfo .webinfo-item {
+    display: block;
+    padding: 4px 0 0;
+}
+#aside_content .card-webinfo .webinfo .webinfo-item div:first-child {
+    display: inline-block;
+}
+#aside_content .card-webinfo .webinfo .webinfo-item div:last-child {
+    display: inline-block;
+    float: right;
+}
+
+.img-wrap {
+    width: 100%;
+}
+.img {
+    width: 24%;
+}
